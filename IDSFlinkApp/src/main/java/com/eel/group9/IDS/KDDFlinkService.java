@@ -14,8 +14,8 @@ import org.springframework.stereotype.Component;
 public class KDDFlinkService {
 
     private static final String BOOTSTRAP_SERVERS = "localhost:9092";
-    private static final String TOPIC_INPUT = "streamIn26A";
-    private static final String TOPIC_OUTPUT = "streamOut26A";
+    private static final String TOPIC_INPUT = "streamIn27A";
+    private static final String TOPIC_OUTPUT = "streamOut27A";
     private static final String FLINK_CG = "flinkCG26A";
 
     @PostConstruct
