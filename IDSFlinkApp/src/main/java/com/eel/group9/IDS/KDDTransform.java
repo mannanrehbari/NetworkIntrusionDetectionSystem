@@ -45,6 +45,7 @@ public class KDDTransform implements MapFunction<String, String> {
         // Indexes of numeric columns
         //0,icmp,ecr_i,SF,520,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,511,511,0.0,0.0,0.0,0.0,1.0,0.0,0.0,255,255,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,smurf.
         List<String> parts = new ArrayList<>(Arrays.asList(s.split(",")));
+        int rawLength = parts.size();
 
         parts.set(1, embeddings.get(parts.get(1)).toString()); // protocol_type
         parts.set(3, embeddings.get(parts.get(3)).toString()); // flag
@@ -59,6 +60,8 @@ public class KDDTransform implements MapFunction<String, String> {
         });
 
         parts.remove(2);
-        return String.join(",", parts);
+        int transformedLength = parts.size();
+        String transformedStr = String.join(",", parts);
+        return transformedStr;
     }
 }

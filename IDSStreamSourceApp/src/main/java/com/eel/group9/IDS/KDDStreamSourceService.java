@@ -14,7 +14,7 @@ import java.io.InputStreamReader;
 @Component
 public class KDDStreamSourceService {
 
-    private static final String TOPIC = "streamIn25A";
+    private static final String TOPIC = "streamIn27A";
     private KafkaTemplate kafkaTemplate;
     private ResourceLoader resourceLoader;
 
